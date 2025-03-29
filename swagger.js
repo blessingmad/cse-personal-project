@@ -1,15 +1,17 @@
-const swaggerAutogen = require ('swagger-autogen')();
+const swaggerAutogen = require ('swagger-autogen')(); // import swagger auto generator.
 
+// define the Swagger documentation details.
 const doc = {
     info: { 
-        title: 'Cars Api',
-        description: 'Cars Api'
+        title: 'Cars Api', // Api title
+        description: 'Cars Api' // description
     },
-    host: 'localhost:3000',
-    schemes: ['https', 'http']
+    host: 'localhost:3000', // Api host 
+    schemes: ['https', 'http'] // supported protocols.
 };
 
-const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/index.js'];
+const outputFile = './swagger.json'; //specify the output file for the generated swagger JSON
 
-swaggerAutogen(outputFile, endpointsFiles, doc);
+const endpointsFiles = ['./routes/index.js']; // Define the entry point for route scanning 
+
+swaggerAutogen(outputFile, endpointsFiles, doc); // generate the Swagger documentation based on routes.
