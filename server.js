@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 3001;  //Define port
 
 
-app.use('/', require('./routes')); // use route handlers from routes module
+
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
@@ -24,6 +24,7 @@ app.use((req, res, next) => {
      next();
 });
 
+app.use('/', require('./routes')); // use route handlers from routes module
 // initiate database connections
 mongodb.initDb((err )=> {
     if (err){

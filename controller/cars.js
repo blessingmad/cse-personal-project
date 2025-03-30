@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
     //swagger.tag=['Users']
 
-    const result = await mongodb.getDatabase().db('Newproject').collection('cars').find();
+    const result = await mongodb.getDatabase().collection('cars').find();
     result.toArray().then((cars) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(users);
@@ -18,7 +18,7 @@ const getSingle = async (req, res) => {
         return res.status(400).json({err:'Invalid id formart'});
     }
     const userId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db('Newproject').collection('cars').find( {_id: carId});
+    const result = await mongodb.getDatabase().collection('cars').find( {_id: carId});
     result.toArray().then((users) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(cars[0]);
@@ -37,7 +37,7 @@ const createCar = async (req, res) => {
         location: req.body.location,
         milage: req.body.milage
     };
-    const response = await mongodb.getDatabase().db().collection('cars').insertOne(car);
+    const response = await mongodb.getDatabase().collection('cars').insertOne(car);
     if (response.acknowledged) {
         res.status(204).send();
     } 
@@ -57,7 +57,7 @@ const createCar = async (req, res) => {
             milage: req.body.milage
            
         };
-        const response = await mongodb.getDatabase().db().collection('cars').replaceOne({_id: carId}, car);
+        const response = await mongodb.getDatabase().collection('cars').replaceOne({_id: carId}, car);
         if (response.modifiedCount > 0) {
             res.status(204).send();
         } 
