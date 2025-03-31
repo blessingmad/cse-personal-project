@@ -72,7 +72,7 @@
           }
         }
       },
-      "/users/{id}": {
+      "/cars/{id}": {
         "get": {
           "description": "",
           "produces": [
