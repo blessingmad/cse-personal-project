@@ -110,18 +110,19 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "username": {
+                  "brandName": {
                     "example": "any"
                   },
-                  "email": {
+                  "ownerEmail": {
                     "example": "any"
                   },
-                  "name": {
+                  "model": {
                     "example": "any"
                   },
-                  "ipaddress": {
+                  "location": {
                     "example": "any"
-                  }
+                  },
+                  "milage": "any"
                 }
               }
             }
