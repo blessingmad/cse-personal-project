@@ -7,7 +7,7 @@ const getAll = async (req, res) => {
     const result = await mongodb.getDatabase().collection('cars').find();
     result.toArray().then((cars) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users);
+        res.status(200).json(cars);
     });
 
 };
@@ -29,7 +29,7 @@ const getSingle = async (req, res) => {
 
 const createCar = async (req, res) => {
     //swagger.tag=['Users']
-    const carId = new ObjectId(req, params.id)
+    const carId = new ObjectId(req.params.id)
     const car = {
         brandName: req.body.brandName,
         ownerEmail: req.body.ownerEmail,
@@ -42,13 +42,13 @@ const createCar = async (req, res) => {
         res.status(204).send();
     } 
     else {
-        res.status(500).json(response.error || 'Some error occured while updating the contact.');
+        res.status(500).json(response.error || 'Some error occured while updating the car.');
     };
 
     };
      
     const updateCar = async (req, res) => {
-        const carId = new ObjectId(req. params.id);
+        const carId = new ObjectId(req.params.id);
         const car = {
             brandName: req.body.brandName,
             ownerEmail: req.body.ownerEmail,
@@ -62,17 +62,17 @@ const createCar = async (req, res) => {
             res.status(204).send();
         } 
         else {
-            res.status(500).json(response.error || 'Some error occured while updating the contact.');
+            res.status(500).json(response.error || 'Some error occured while updating the car.');
         }
     };
 
-const deleteCar = async (req, res) => {
-    const UserId = new ObjectId(req, params.id);
-    const response = await mongodb.getDatabase().db().collection('cars').remove({_id: carId}, true);
+const deleteCar = async (reqres) => {
+    const UserId = new ObjectId(req.params.id);
+    const response = await mongodb.getDatabase().db().collection('cars').deleteOne({_id: carId});
     if (response.deletedCount > 0) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some errors occured while deleting the contact.');
+        res.status(500).json(response.error || 'Some errors occured while deleting the car.');
 
     };
         
