@@ -20,7 +20,7 @@ app.use((req, res, next) => {
         'Access-Control-Allow-Headers',
         'Origin, X-Requested-Width, Content-Type, Accept, Z-key'
      );
-     res.setHeader('Access-Control-Allow-Method', 'GET','POST', 'DELETE', 'OPTIONS');
+     res.setHeader('Access-Control-Allow-Method', 'GET, POST, DELETE, OPTIONS');
      next();
 });
 
