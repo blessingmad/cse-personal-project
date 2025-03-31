@@ -22,7 +22,7 @@
           }
         }
       },
-      "/users/": {
+      "/cars/": {
         "get": {
           "description": "",
           "produces": [
@@ -43,19 +43,19 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "firstName": {
+                  "brandName": {
                     "example": "any"
                   },
-                  "lastName": {
+                  "ownerEmail": {
                     "example": "any"
                   },
-                  "email": {
+                  "model": {
                     "example": "any"
                   },
-                  "favoriteColor": {
+                  "location": {
                     "example": "any"
                   },
-                  "birthday": {
+                  "milage": {
                     "example": "any"
                   }
                 }
