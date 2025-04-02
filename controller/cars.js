@@ -19,7 +19,7 @@ const getSingle = async (req, res) => {
     }
     const carId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().collection('cars').find( {_id: carId});
-    result.toArray().then((users) => {
+    result.toArray().then((cars) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(cars[0]);
     });
