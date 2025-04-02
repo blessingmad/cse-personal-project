@@ -67,7 +67,7 @@ const createCar = async (req, res) => {
     };
 
 const deleteCar = async (req, res) => {
-    const UserId = new ObjectId(req.params.id);
+    const carId = new ObjectId(req.params.id);
     const response = await mongodb.getDatabase().collection('cars').deleteOne({_id: carId});
     if (response.deletedCount > 0) {
         res.status(204).send();
