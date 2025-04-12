@@ -12,7 +12,7 @@ router.get('/',(req, res) => {
 
 // route for handling car related requests.
 router.use('/cars', require('./cars'));
-router.use('/users', require('./users'));
+router.use('/users', require('./users')); 
 
 
 router.get('/login', passport.authenticate('github'), (req, res) => {});
