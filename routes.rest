@@ -58,11 +58,11 @@ PUT http://localhost:3001/user/67e9caaa6ff90d130d4a5ad1 HTTP/1.1
 Content-Type: application/json
 
 {
-    "brandName": "Toyota",
-    "ownerEmail": "toyota@gmail.com",
-    "model": "2022",
-    "location": "Emerald Hill",
-    "milage": "2o21"
+    "firstName": "Toyota",
+    "lastName": "Total Energy",
+    "email": "2022@hotmail.org",
+    "favoriteColor": "Emerald Hill",
+    "birthday": "2021/01/11"
 }
 
 ### Delete contactt,
