@@ -53,16 +53,16 @@ Content-Type: application/json
     "birthday":"any"
 }
 
-### put contacts
-PUT http://localhost:3001/users/67e9ca766ff90d130d4a5acf HTTP/1.1
+### put cars
+PUT http://localhost:3001/user/67e9caaa6ff90d130d4a5ad1 HTTP/1.1
 Content-Type: application/json
 
 {
-   "firstName":"Tapiwa",
-    "lastName":"any",
-    "email":"any",
-    "favoriteColor":"any",
-    "birthday":"any"
+    "brandName": "Toyota",
+    "ownerEmail": "toyota@gmail.com",
+    "model": "2022",
+    "location": "Emerald Hill",
+    "milage": "2o21"
 }
 
 ### Delete contactt,
