@@ -34,7 +34,6 @@ Content-Type: application/json
 
 ### Delete car,
 DELETE http://localhost:3001/cars/67d93de95b7d4c3c8d115ce3 HTTP/1.1
-########################################################################################
 
 GET  http://localhost:3001/users
 
@@ -66,6 +65,4 @@ Content-Type: application/json
 }
 
 ### Delete user,
-DELETE http://localhost:3001/users/67d93de95b7d4c3c8d115ce3 HTTP/1.1
-
-###############################
+DELETE http://localhost:3001/users/67d93de95b7d4c3c8d115ce3 HTT
