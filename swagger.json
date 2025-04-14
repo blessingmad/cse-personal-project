@@ -5,7 +5,7 @@
     "description": "Cars Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3001",
+  "host": "cse-personal-project-2.onrender.com",
   "basePath": "/",
   "schemes": [
     "https",
@@ -278,16 +278,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "username": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "name": {
+                "favoriteColor": {
                   "example": "any"
                 },
-                "ipaddress": {
+                "birthday": {
                   "example": "any"
                 }
               }
